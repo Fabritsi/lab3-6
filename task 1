@@ -1,0 +1,27 @@
+using System;
+using static System.Random;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+       public static void Main(string[] args)
+            {
+                Random rand = new Random();
+                Console.Write("Введіть n: ");
+                int n = int.Parse(Console.ReadLine());
+                int[] arr = new int[n];
+                int max = int.MinValue;
+                for (int x = 0; x < arr.Length; x++)
+                {
+                    arr[x] = rand.Next(-5, 15);
+                    Console.Write(arr[x] + ",");
+                        if (arr[x] > max)
+                        {
+                             max = arr[x];
+                        }
+                }
+                Console.WriteLine("max = " + max);
+        }
+    }
+ }
