@@ -1,0 +1,30 @@
+using System;
+
+namespace Лабораторні_завдання
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("n = ");
+            int n = int.Parse(Console.ReadLine());
+            
+            int[] x = new int[n];
+            int[] y = new int[n];
+            int z;
+            for (int i = 0; i < x.Length; i++)
+                for (int j = 0; j < y.Length; j++)
+                {
+                x[i] = int.Parse(Console.ReadLine());
+                y[i] = int.Parse(Console.ReadLine());
+                z = x[i] * y[j];
+            }
+
+            Console.Write("Чкалярний добуток векторів = ");
+            foreach (int i in x)
+            {
+                Console.Write($"{i} ");
+            }
+        }
+    }
+}
